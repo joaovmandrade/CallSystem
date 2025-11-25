@@ -3,7 +3,7 @@ import './signin.css';
 import logo from '../../assets/logo.png';
 import { Link } from 'react-router-dom';
 
-export default function SignIn() {
+export default function Signin() {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
