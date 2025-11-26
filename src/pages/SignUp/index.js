@@ -9,14 +9,22 @@ export default function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  function handleSubmit(e){
+    e.preventDefault();
+
+    if(name !== "" || email !== "" || password !== ""){
+      
+    }
+  }
+
   return (
     <div className="container-center">
       <div className="login">
         <div className="login-area">
-          <img src={logo} alt="Logo Call System" />
+          <img src={logo} alt="Logo Call System"/>
         </div>
 
-        <form>
+        <form onSubmit={handleSubmit}>
           <h1>Cadastrar</h1>
           <input
             type="text"
@@ -33,12 +41,6 @@ export default function Signup() {
           <input
             type="password"
             placeholder="Senha"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="Confirmar Senha"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
